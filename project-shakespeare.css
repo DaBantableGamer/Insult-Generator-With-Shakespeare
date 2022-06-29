@@ -1,0 +1,56 @@
+body {
+    background-image: url(shakespeare-bg.jpeg);
+}
+
+h1 {
+    font-family: cursive;
+    margin: auto;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-bottom: -10%;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+}
+
+h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    padding: -20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.menu {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(253, 194, 66);
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: -5px;
+    max-width: 1000px;
+}
+
+.arrow {
+    font-family: 'Fira Code', 'Times New Roman';
+}
+
+a {
+    color: gold;
+}
+
+a:hover {
+    color: silver;
+}
+a:visited {
+    color: crimson
+}
+a:active {
+    color: darkblue
+}
