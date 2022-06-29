@@ -1,16 +1,42 @@
+// var secondKey = Object.keys('insult'); //fetched the key at third index
+
 /*
 function getWord() {
     fetch('https://insult.mattbas.org/api/insult.json')
         .then(response => response.json())
-        .then(data => document.getElementById('data').innerText = obj.['args'].['template']);
+        .then(data => document.getElementById('data').innerText = secondKey);
 }
 getWord()
+
 */
 
-function getWord(){
+
+function getNoun(){
     fetch('https://random-words-api.vercel.app/word/noun')
       .then(response => response.json())
       .then(data => document.getElementById('data').innerText = data[0].word );
  }
- 
- getWord() 
+ getNoun() 
+
+
+
+/*
+
+
+
+{
+ "error": false, 
+ "args": {"lang": "en", "template": "You are as <adjective> as <article target=adj1> <adjective min=1 max=3 id=adj1> <amount> of <adjective min=1 max=3> <animal> <animal_part>"}, 
+ "insult": "You are as rotten as a wicked buttload of nasty spiteful diseased cockroach guts"
+}
+
+
+
+[
+  {
+    "word": "Emphasis",
+    "definition": "",
+    "pronunciation": "Emfasis"
+  }
+]
+ */

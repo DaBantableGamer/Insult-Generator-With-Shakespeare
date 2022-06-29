@@ -33,6 +33,10 @@ h1, h2 {
     padding-left: 10px;
     padding-bottom: 0px;
     max-width: 1000px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(47, 47, 47);
+    
 }
 
 .top-line {

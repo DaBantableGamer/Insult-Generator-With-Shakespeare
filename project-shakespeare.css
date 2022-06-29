@@ -43,6 +43,9 @@ h1, h2 {
     padding-left: 10px;
     padding-bottom: -5px;
     max-width: 1000px;
+    border-style: double;
+    border-width: 7px;
+    border-color: rgb(0, 0, 0);
 }
 
 .arrow {

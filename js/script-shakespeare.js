@@ -7,10 +7,12 @@ function getWord() {
 getWord()
 */
 
-function getWord(){
-    fetch('https://random-words-api.vercel.app/word/noun')
-      .then(response => response.json())
-      .then(data => document.getElementById('data').innerText = data[0].word );
- }
- 
- getWord() 
+var insultOne = ["artless", "bawdy", "beslubbering", "stupid", "bootless", "churlish", "churl", "cockered", "clouted", "craven", "currish", "dankish", "dissemb", "droning ", "errant", "fawning", "fobbing", "froward", "frothy",  "gleeking", "goatish", "gorbelli", "impertin", "infectio", "jarring", "loggerhe", "lumpish", "mammering", "mangled", "mewling", "paunchy", "pribbling", "puking", "puny", "qualling", "rank", "reeky", "roguish", "ruttish", "spleeny", "spongy", "surly", "tottering", "unmuzzle", "vain", "venomed", "villainous", "warped", "wayward", "weedy", "yeasty", "wagtail" ];
+
+
+function getWord() {
+    fetch('https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js')
+        .then(response => response.text())
+        .then(data => document.getElementById('data').innerHTML=insultOne[Math.floor(Math.random()*(insultOne.length))]);
+}
+getWord()
