@@ -13,7 +13,7 @@ h2 {
     margin: auto;
 }
 
-h5 {
+.mode {
     font-family: cursive;
     text-align: right;
     padding-bottom: -20px;
@@ -37,6 +37,10 @@ h1, h2 {
     border-width: 2px;
     border-color: rgb(47, 47, 47);
     
+}
+
+.number{
+    margin: auto;
 }
 
 .top-line {
