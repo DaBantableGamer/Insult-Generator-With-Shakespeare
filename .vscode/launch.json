@@ -7,8 +7,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open hello.html",
-            "file": "/Users/daniel/Documents/project/haaris-repo/hello.html"
+            "name": "Open project.html",
+            "file": "/Users/daniel/Documents/project/haaris-repo/project.html"
         }
     ]
 }

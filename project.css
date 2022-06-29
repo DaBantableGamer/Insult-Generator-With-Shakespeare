@@ -1,10 +1,11 @@
 body {
-    background-image: url(invert-bg.png); 
+    background-image: url(images/invert-bg.png); 
 }
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
+    font-size: xx-large;
 }
 
 h2 {
@@ -37,6 +38,8 @@ h1, h2 {
 .top-line {
     margin: 0px;
     padding: 0px;
+    color: black;
+    height: 2px;
 }
 
 .arrow {

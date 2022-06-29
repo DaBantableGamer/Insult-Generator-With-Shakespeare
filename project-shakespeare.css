@@ -1,5 +1,5 @@
 body {
-    background-image: url(shakespeare-bg.jpeg);
+    background-image: url(images/shakespeare-bg.jpeg);
 }
 
 h1 {
@@ -24,6 +24,14 @@ h5 {
 h1, h2 {
     text-align: center;
 }
+
+.top-line {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    height: 2px;
+}
+
 
 .menu {
     width: 80%;
