@@ -10,19 +10,37 @@ getWord()
 
 */
 
-
+/*
 function getNoun(){
     fetch('https://random-words-api.vercel.app/word/noun')
       .then(response => response.json())
       .then(data => document.getElementById('data').innerText = data[0].word );
  }
  getNoun() 
+*/
+
+
+async function getAdjective(){
+    const response = await fetch('https://insult.mattbas.org/api/adjective.json');
+    var data = await response.json();
+    console.log(data['insult']);
+    document.getElementById('insult').innerText = data['insult']
+}
+ getAdjective() 
 
 
 
 /*
 
 
+function getAdjective(){
+    fetch('https://insult.mattbas.org/api/adjective.html')
+      .then(response => response.text)
+      .then(data => document.getElementsByClassName('insult'))
+      .then(text => console.log(data))
+
+ }
+ getAdjective() 
 
 {
  "error": false, 

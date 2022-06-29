@@ -5,9 +5,13 @@ body {
 h1 {
     font-family: cursive;
     margin: auto;
-    font-size: xx-large;
     font-weight: bold;
     padding-bottom: -10%;
+}
+
+.title {
+    font-size: 350%;
+    padding-top: 20px;
 }
 
 h2 {
@@ -28,8 +32,10 @@ h1, h2 {
 .top-line {
     margin: 0px;
     padding: 0px;
-    color: black;
+    color: white;
+    fill: white;
     height: 2px;
+    border-color: white;
 }
 
 
