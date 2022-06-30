@@ -30,17 +30,21 @@
 
 
         <section class="insults"> <!-- The insult Gen Section/ Where the insults are written-->
-        
-            <script src="js/script.js"></script> <!-- Fetches the insult-->
 
             <form id="numInputForm"> <!-- Form to input the number of insults wanted -->
-            <h3 class = 'numInput'>Input the number of Insults to generate: <input type="number" class = number min='1' max='100' id="numberIn">
+            <h3 class = 'numInput'>Input the number of Insults to generate: <input type="number" class = number min='1' max='100' id="numberIn" placeholder="Enter a number" value="10">
+            <input type="button" value="Submit" id="enterButton">
             </form>
             
-
+            <section class="numScript"> <!--The Script that I'm not really sure is useful so I just commented out cause they failed-->
             <script id="numScript">
-                var numberInputted = document.getElementById("numberIn");
-                console.log(numberInputted)
+                // for (let i = 0; i == numberInputted; i++){
+                    // getAdjective() //function that fetches the insult
+                // }
+
+                //var numberInputted = document.getElementById("numberIn");
+                //console.log(numberInputted.value)
+
                 /*for (let i = 0; i == numberInputted; i++){
                     getAdjective() //function that fetches the insult
                 }*/ 
@@ -56,13 +60,13 @@
                 return results;
                 }; */
                 </script>
-
-            <button id = "enterButton" type = submit form=numInputForm onclick=getElementById(numScript)>Enter!</button></h3>
+            </section> 
             <!--Button to submit number of insults wanted-->
+            <!--<button id = "enterButton" type = submit form=numInputForm onclick=getElementById(numScript)>Enter!</button></h3>-->
 
-        
+
             <p>
-                <h2>You are <span id='insult'></span></h2> <!-- prints insult with template -->
+                <h2>You are: <span id='insult'></span></h2> <!-- prints insult with template -->
             </p> 
 
             <p id="showInputHere"></p> <!-- Enter Key presses Button -->
@@ -84,11 +88,8 @@
             <!--<h2>Insults: <span id='insult'></span></h2>-->
         
         </section>
-
-        <section class="tempSen"> <!-- Template Sentence Area -->
-                       
-        </section>    
-
     </div>
+
+    <script src="js/script.js"></script> <!-- Fetches the insult-->
 </head>
 </html>

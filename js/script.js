@@ -19,17 +19,81 @@ function getNoun(){
  getNoun() 
 */
 
+// 'Primitive' types e.g. integer (3), string (Haaris), boolean (true/false)
 
+// Array / Object
+
+// Element <input type="button">
+
+/* Pseudo-code */
+
+/*
+Browsers understand version 5 of JavaScript, or 'ES5'.
+Nowadays, we use ES8, so for browsers to understand that, we need to translate (like French to English for an English speaker), but in programming we call this 'transpiling'
+For now, we're just going to write everything in ES5, but you can start learning ES6/7/8/whatever as well, as we'll get some transpiling going.
+*/
+
+// []
+// [0 => 'vile']
+// [0 => 'vile', 1 => 'horrible']
+
+
+
+
+
+// 'When we' - Modifying 2. b) to be more 'modern' - we use 'event listeners' in the JavaScript, rather than onclick in the HTML
+
+// 1. Write a function that queries their API for an adjective - getAdjective
 async function getAdjective(){
     const response = await fetch('https://insult.mattbas.org/api/adjective.json');
     var data = await response.json();
     console.log(data['insult']);
-    document.getElementById('insult').innerText = data['insult']
+    //document.getElementById('insult').innerText = data['insult'];
+    return data.insult
 }
- getAdjective() 
+
+// 2. a) Write a function (getNum) that gets the number that the user has input, and runs the first function (getAdjective) that many times (inefficiency)
+async function getNum() {
+  var string = ''
+  //console.log('anything')
+  var number = document.getElementById("numberIn").value
+  console.log(number)
+
+  // 3. Create an empty array so we can start putting words in it
+  var arrayOfInsults = [];
+
+  // 2. c) Build up a long string of words that the API has given us, and add a line break between each
+  for (let i = 0; i < number; i++){
+    var word = await getAdjective()
+
+    // 3. Ensure that there aren't any duplicates *before* we output it to the page. We may need more API calls to ask for replacements.
+    if (arrayOfInsults.includes(word)) {
+      // 3. a) If it's a dupe, put the array pointer back one, as we need to try again
+      i--;
+    } else {
+      // 3. b) If it's not a dupe, add it to our array of insults
+      arrayOfInsults.push(word);
+    }
+    
+    //string =  string + '\n' + word //function that fetches the insult
+  }
+  
+  // 2. d) Convert our non-duplicate array into a string, using \n (new line) as a 'delimiter' to separate the words
+  document.getElementById('insult').innerText = arrayOfInsults.join('\n');
+}
+
+// 2. b) When the Submit button is clicked, run the getNum function
+var btn = document.getElementById('enterButton')
+console.log(btn)
+btn.addEventListener('click', function(e) {
+  getNum()
+})
 
 
-
+// New code that we haven't written yet
+// 4. When the user clicks submit, make sure the user has put *something* in
+// 5. When the user clicks submit, make sure the number isn't above 20 or below 1
+// 6. After the 5th insult, start SHOUTING INSULTS IN CAPITAL LETTERS BECAUSE THE PERSON CLEARLY ISN'T LISTENING
 /*
 
 
