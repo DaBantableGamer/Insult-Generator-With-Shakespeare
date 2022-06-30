@@ -63,23 +63,21 @@ async function getNum() {
   var arrayOfInsults = [];
 
   // 2. c) Build up a long string of words that the API has given us, and add a line break between each
-  for (let i = 0; i < number; i++){
+  for (let i = 1; i <= number; i++){
     var word = await getAdjective()
-
     // 3. Ensure that there aren't any duplicates *before* we output it to the page. We may need more API calls to ask for replacements.
     if (arrayOfInsults.includes(word)) {
       // 3. a) If it's a dupe, put the array pointer back one, as we need to try again
       i--;
-    } else {
+    }
+    else {  
       // 3. b) If it's not a dupe, add it to our array of insults
       arrayOfInsults.push(word);
     }
-    
     //string =  string + '\n' + word //function that fetches the insult
   }
-  
   // 2. d) Convert our non-duplicate array into a string, using \n (new line) as a 'delimiter' to separate the words
-  document.getElementById('insult').innerText = arrayOfInsults.join('\n');
+document.getElementById('insult').innerText = arrayOfInsults.join('\n');
 }
 
 // 2. b) When the Submit button is clicked, run the getNum function
@@ -87,16 +85,31 @@ var btn = document.getElementById('enterButton')
 console.log(btn)
 btn.addEventListener('click', function(e) {
   getNum()
-})
+});
 
 
 // New code that we haven't written yet
 // 4. When the user clicks submit, make sure the user has put *something* in
+var formEdit = document.getElementById('numberIn');
+formEdit.addEventListener('input', e => console.log('Form Changed'))
+
 // 5. When the user clicks submit, make sure the number isn't above 20 or below 1
+
+
+
 // 6. After the 5th insult, start SHOUTING INSULTS IN CAPITAL LETTERS BECAUSE THE PERSON CLEARLY ISN'T LISTENING
 /*
+arrayOfInsults = arrayOfInsults.map(function(x){return x.toUpperCase()})
+      console.log(arrayOfInsults + i)
+*/
+    
 
 
+
+
+
+
+/*
 function getAdjective(){
     fetch('https://insult.mattbas.org/api/adjective.html')
       .then(response => response.text)
@@ -113,7 +126,6 @@ function getAdjective(){
 }
 
 
-
 [
   {
     "word": "Emphasis",
@@ -121,4 +133,4 @@ function getAdjective(){
     "pronunciation": "Emfasis"
   }
 ]
- */
+*/
