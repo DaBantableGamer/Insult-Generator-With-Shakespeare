@@ -119,10 +119,6 @@ else {
 arrayOfInsults = arrayOfInsults.map(function(x){return x.toUpperCase()})
       console.log(arrayOfInsults + i)
 */
-    
-
-
-
 
 
 

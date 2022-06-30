@@ -28,8 +28,16 @@ async function getAdjective(){
 //       fetchInject([
 //         'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js'
 //     ]).then(() => {
-        console.log(`insult one: ${insultOne}`)
-//       })
+        
+//         function addScript(script) {
+//           var jsElement = document.createElement("script");
+//           jsElement.type = "application/javascript";
+//           jsElement.src = script;
+//           document.body.appendChild(jsElement);
+//       }
+//       function addScript('https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js');
+//       console.log(`insult one: ${insultOne}`)
+// //       })
  }
 
 
