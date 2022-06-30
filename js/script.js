@@ -61,20 +61,28 @@ async function getNum() {
 
   // 3. Create an empty array so we can start putting words in it
   var arrayOfInsults = [];
-
-  // 2. c) Build up a long string of words that the API has given us, and add a line break between each
-  for (let i = 1; i <= number; i++){
-    var word = await getAdjective()
-    // 3. Ensure that there aren't any duplicates *before* we output it to the page. We may need more API calls to ask for replacements.
-    if (arrayOfInsults.includes(word)) {
-      // 3. a) If it's a dupe, put the array pointer back one, as we need to try again
-      i--;
-    }
-    else {  
-      // 3. b) If it's not a dupe, add it to our array of insults
-      arrayOfInsults.push(word);
-    }
+  let numCheck = Number(document.getElementById('numberIn').value)
+  console.log(numCheck)
+  // 4. When the user clicks submit, make sure the user has put *something* in
+  // 5. When the user clicks submit, make sure the number isn't above 20 or below 1
+  if (numCheck <= 0 || numCheck > 20){
+    alert('You MUST input a Number Greater Than 0 and Less Than or Equal To 20!')
+  }
+  else {
+    // 2. c) Build up a long string of words that the API has given us, and add a line break between each
+    for (let i = 1; i <= number; i++){
+      var word = await getAdjective()
+      // 3. Ensure that there aren't any duplicates *before* we output it to the page. We may need more API calls to ask for replacements.
+      if (arrayOfInsults.includes(word)) {
+        // 3. a) If it's a dupe, put the array pointer back one, as we need to try again
+        i--;
+     }
+      else {  
+        // 3. b) If it's not a dupe, add it to our array of insults
+        arrayOfInsults.push(word);
+     }
     //string =  string + '\n' + word //function that fetches the insult
+    }
   }
   // 2. d) Convert our non-duplicate array into a string, using \n (new line) as a 'delimiter' to separate the words
 document.getElementById('insult').innerText = arrayOfInsults.join('\n');
@@ -89,11 +97,20 @@ btn.addEventListener('click', function(e) {
 
 
 // New code that we haven't written yet
-// 4. When the user clicks submit, make sure the user has put *something* in
-var formEdit = document.getElementById('numberIn');
-formEdit.addEventListener('input', e => console.log('Form Changed'))
 
-// 5. When the user clicks submit, make sure the number isn't above 20 or below 1
+// 4. When the user clicks submit, make sure the user has put *something* in -- DONE
+// 5. When the user clicks submit, make sure the number isn't above 20 or below 1 -- DONE
+var formEdit = document.getElementById('numberIn');
+formEdit.addEventListener('input', e => console.log('Form Changed')) //Records if Form has changed in console -- Could be useful?
+/*
+var numCheck = document.getElementById('numberIn').value
+if (numCheck != Number){
+  alert('You MUST input a Number!')
+}
+else {
+*/
+
+// Added required arg onto the form html -- maybe a more eff way using javascript
 
 
 
