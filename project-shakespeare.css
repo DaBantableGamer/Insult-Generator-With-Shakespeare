@@ -17,6 +17,7 @@ h1 {
 h2 {
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
+    font-size: xx-large;
 }
 
 h5 {
@@ -78,4 +79,8 @@ a:active {
     padding-top: 10px;
     margin: 0px;
     font-size: x-large;
+}
+
+.listPrefix {
+    padding-top: 10px;
 }

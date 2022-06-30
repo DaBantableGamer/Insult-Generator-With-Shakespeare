@@ -99,7 +99,7 @@ btn.addEventListener('click', function(e) {
 // New code that we haven't written yet
 
 // 4. When the user clicks submit, make sure the user has put *something* in -- DONE
-// 5. When the user clicks submit, make sure the number isn't above 20 or below 1 -- DONE
+// 5. When the user clicks submit, make sure the number isn't above 20 or below 1 -- DONE + Throws up an Alert
 var formEdit = document.getElementById('numberIn');
 formEdit.addEventListener('input', e => console.log('Form Changed')) //Records if Form has changed in console -- Could be useful?
 /*
