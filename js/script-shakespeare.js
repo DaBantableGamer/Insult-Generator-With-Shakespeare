@@ -13,6 +13,7 @@ var insultOne = ["artless", "bawdy", "beslubbering", "stupid", "bootless", "chur
 function getWord() {
     fetch('https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js')
         .then(response => response.text())
-        .then(data => document.getElementById('data').innerHTML=insultOne[Math.floor(Math.random()*(insultOne.length))]);
+        .then(data => document.getElementById('insult').innerHTML=insultOne[Math.floor(Math.random()*(insultOne.length))]);
 }
 getWord()
+

@@ -6,7 +6,7 @@ h1 {
     font-family: cursive;
     margin: auto;
     font-weight: bold;
-    padding-bottom: -10%;
+    padding-bottom: 0%;
 }
 
 .title {
@@ -70,4 +70,12 @@ a:visited {
 }
 a:active {
     color: darkblue
+}
+
+.numInput {
+    font-family: cursive;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0px;
+    font-size: x-large;
 }

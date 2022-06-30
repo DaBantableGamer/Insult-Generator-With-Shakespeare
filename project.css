@@ -13,10 +13,13 @@ h2 {
     margin: auto;
 }
 
+
+
 .mode {
     font-family: cursive;
     text-align: right;
     padding-bottom: -20px;
+    margin: 0px;
 }
 
 h1, h2 {
@@ -31,7 +34,7 @@ h1, h2 {
     padding-top: 5px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-bottom: 0px;
+    padding-bottom: -10px;
     max-width: 1000px;
     border-style: solid;
     border-width: 2px;
@@ -44,7 +47,7 @@ h1, h2 {
 }
 
 .top-line {
-    margin: 0px;
+    margin-bottom: 10px;
     padding: 0px;
     color: black;
     height: 2px;
@@ -66,4 +69,15 @@ a:visited {
 }
 a:active {
     color: darkblue
+}
+
+.numInput {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+.number {
+    width: 125px;
 }
