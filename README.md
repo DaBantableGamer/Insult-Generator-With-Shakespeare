@@ -1,4 +1,3 @@
 # haaris-repo
-This is a random insult generator that has a Shakespearian Insult Mode. 
-WIP
+This is a random insult generator that also has a Shakespearian Insult Mode.
 :)
