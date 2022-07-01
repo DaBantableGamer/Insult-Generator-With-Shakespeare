@@ -40,7 +40,7 @@ function getNum() {
   // 3. Create an empty array so we can start putting words in it
   var arrayOfInsults = [];
   let numCheck = Number(document.getElementById('numberIn').value)
-  console.log(numCheck)
+  // console.log(numCheck)
   // 4. When the user clicks submit, make sure the user has put *something* in
   // 5. When the user clicks submit, make sure the number isn't above 20 or below 1
   if (numCheck <= 0 || numCheck > 20){
@@ -67,7 +67,7 @@ function getNum() {
   var len = arrayOfInsults.length;
   // console.log(arrayOfInsultsUpper + i)
   if (len <= 5) {
-    document.getElementById('insult-display').innerText = arrayOfInsults.join('\n');
+    document.getElementById('insult-display').innerText = arrayOfInsults.join('\n') + '\n';
     }
   else {      // 6. After the 5th insult, start SHOUTING INSULTS IN CAPITAL LETTERS BECAUSE THE PERSON CLEARLY ISN'T LISTENING -- DONE
     const slicedArray = arrayOfInsults.slice(0, 5); // stores first 5 values in a new array

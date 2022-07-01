@@ -57,12 +57,12 @@ async function getNum() {
   var string = ''
   //console.log('anything')
   var number = document.getElementById("numberIn").value
-  console.log(number)
+  // console.log(number)
 
   // 3. Create an empty array so we can start putting words in it
   var arrayOfInsults = [];
   let numCheck = Number(document.getElementById('numberIn').value)
-  console.log(numCheck)
+  // console.log(numCheck)
   // 4. When the user clicks submit, make sure the user has put *something* in
   // 5. When the user clicks submit, make sure the number isn't above 20 or below 1
   if (numCheck <= 0 || numCheck > 20){
