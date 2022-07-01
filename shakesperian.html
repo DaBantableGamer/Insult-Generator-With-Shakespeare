@@ -28,8 +28,9 @@
         <h3 class = 'numInput'>Input the number of Insults to generate: <input required type="number" class = number min='1' max='20' id="numberIn" placeholder="Enter a number" value="10">
         <input type="button" value="Submit" id="enterButton">
         </form>
+        <script type="module" src="https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js"></script>
         <script src="js/script-shakespeare.js" type="text/javascript"></script>
-                <h2 class="listPrefix">You are:<br><span id='insult'></span></h2> <!-- prints insult with template -->
+                <h2 class="listPrefix">Thou art a:<br><span id='insult-display'></span>COWARD!</h2> <!-- prints insult with template -->
             </p> 
 
             <p id="showInputHere"></p> <!-- Enter Key presses Button -->
@@ -52,13 +53,13 @@
         
     </section>
     </div>
-    <script type="module" src="https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js">
+    
         
-    </script> 
-    <script type = 'module'src="js/script-shakespeare.js">
-        import insultOne from 'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js'
-        console.log( insultOne )
-        document.getElementById('insult').innerText = insultOne;
-    </script> <!-- Fetches the insult-->
+    
+    <!-- <script type = 'module'src="js/script-shakespeare.js"> 
+        import insultOne from 'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js' 
+        console.log( insultOne ) 
+        document.getElementById('insult-display').innerText = insultOne;
+    </script> Fetches the insult -->
 </head>
 </html>
