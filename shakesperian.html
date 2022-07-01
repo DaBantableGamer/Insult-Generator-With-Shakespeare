@@ -52,7 +52,13 @@
         
     </section>
     </div>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js"></script> 
-    <script src="js/script-shakespeare.js"></script> <!-- Fetches the insult-->
+    <script type="module" src="https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js">
+        
+    </script> 
+    <script type = 'module'src="js/script-shakespeare.js">
+        import insultOne from 'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js'
+        console.log( insultOne )
+        document.getElementById('insult').innerText = insultOne;
+    </script> <!-- Fetches the insult-->
 </head>
 </html>

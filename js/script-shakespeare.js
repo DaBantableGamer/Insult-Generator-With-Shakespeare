@@ -18,13 +18,27 @@ function getWord() {
 getWord()
 */
  
+
+// import {randomGen()} from 'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js'
+// console.log(randomGen())
+
 async function getAdjective(){
-    console.log('******')
-//     const response = await fetch('https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js');
-//     var data = await response.text();
-//     console.log(data);
-//     document.getElementById('insult').innerText = data['insult'];
-//     return data.insult
+
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'd00f09e4b2mshf66cd476511c108p113d9ejsna4f181cf6dc4',
+  //     'X-RapidAPI-Host': 'shakespeare1.p.rapidapi.com'
+  //   }
+  // };
+    // console.log('******')
+    // // const response = await fetch('https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js');
+    // var data = await response.text();
+    // console.log(data);
+    // document.getElementById('insult').innerText = data['insult'];
+    // return data.insult
+    //import {insultOne} from 'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js'
+    //console.log(randomGen())
 //       fetchInject([
 //         'https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js'
 //     ]).then(() => {
@@ -37,7 +51,7 @@ async function getAdjective(){
 //       }
 //       function addScript('https://raw.githubusercontent.com/CrispyMerchant/insult-generator/master/content/insults.js');
 //       console.log(`insult one: ${insultOne}`)
-// //       })
+//       })
  }
 
 
@@ -46,7 +60,7 @@ async function getNum() {
   var string = ''
   //console.log('anything')
   var number = document.getElementById("numberIn").value
-  console.log(number)
+  // console.log(number)
 
   // 3. Create an empty array so we can start putting words in it
   var arrayOfInsults = [];
@@ -75,7 +89,7 @@ async function getNum() {
     }
   } 
   // 2. d) Convert our non-duplicate array into a string, using \n (new line) as a 'delimiter' to separate the words
-// document.getElementById('insult').innerText = arrayOfInsults.join('\n');
+document.getElementById('insult').innerText = arrayOfInsults.join('\n');
 }
 
 // 2. b) When the Submit button is clicked, run the getNum function

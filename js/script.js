@@ -85,7 +85,18 @@ async function getNum() {
     }
   }
   // 2. d) Convert our non-duplicate array into a string, using \n (new line) as a 'delimiter' to separate the words
-document.getElementById('insult').innerText = arrayOfInsults.join('\n');
+  arrayOfInsultsUpper = arrayOfInsults.map(function(x){return x.toUpperCase()}) // creates variable of an uppercase version of the insult array
+  var len = arrayOfInsults.length;
+  // console.log(arrayOfInsultsUpper + i)
+  if (len <= 5) {
+    document.getElementById('insult').innerText = arrayOfInsults.join('\n');
+    }
+  else {      // 6. After the 5th insult, start SHOUTING INSULTS IN CAPITAL LETTERS BECAUSE THE PERSON CLEARLY ISN'T LISTENING -- DONE
+    const slicedArray = arrayOfInsults.slice(0, 5); // stores first 5 values in a new array
+    const splicedArray = arrayOfInsultsUpper.splice(0, 5);  //Stores everything except first 5 values in a new array
+    document.getElementById('insult').innerText = slicedArray.join('\n') + '\n' + arrayOfInsultsUpper.join('\n')
+    // Combines both arrays plus writes them
+  }
 }
 
 // 2. b) When the Submit button is clicked, run the getNum function
@@ -114,10 +125,10 @@ else {
 
 
 
-// 6. After the 5th insult, start SHOUTING INSULTS IN CAPITAL LETTERS BECAUSE THE PERSON CLEARLY ISN'T LISTENING
+// 6. After the 5th insult, start SHOUTING INSULTS IN CAPITAL LETTERS BECAUSE THE PERSON CLEARLY ISN'T LISTENING -- DONE
 /*
-arrayOfInsults = arrayOfInsults.map(function(x){return x.toUpperCase()})
-      console.log(arrayOfInsults + i)
+arrayOfInsultsUpper = arrayOfInsults.map(function(x){return x.toUpperCase()})
+      console.log(arrayOfInsultsUpper + i)
 */
 
 

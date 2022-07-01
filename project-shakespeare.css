@@ -84,3 +84,7 @@ a:active {
 .listPrefix {
     padding-top: 10px;
 }
+
+.number {
+    width: 125px;
+}
